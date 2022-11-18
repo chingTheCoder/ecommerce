@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import SignUpScreen from './screens/signUp/SignUp.js'
+import SignInScreen from './screens/signIn/SignInScreen.js'
+import MainScreen from './screens/MainScreen/MainScreen';
+
 
 function App() {
+
+  let x = 3
+
+  if (x === 1) {
+    return (
+      <SignInScreen></SignInScreen>
+    )
+  }
+
+  if ( x === 3 ) {
+    return (
+       <MainScreen></MainScreen>
+     )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <SignUpScreen></SignUpScreen>
+  )
+
 }
+
+
+// function App () {
+//   return (
+//     <Routes>
+//         <Route path="/" element={<Home/>}/>
+//         <Route path="/movies" element={<Movies/>}/>
+//         <Route path="/tvseries" element={<Tvseries/>}/>
+//         <Route path="/upcoming" element={<UpComing/>}/>
+//     </Routes>
+//   )
+// }
 
 export default App;

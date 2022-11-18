@@ -1,0 +1,129 @@
+.NavigationMenu {
+    position: fixed;
+    width: 15%;
+    left: 0;
+    right: 15%;
+    height: 100vh;
+    background-color: #212121;
+}
+
+
+.NavigationMenu ul {
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+
+.NavigationMenu ul li {
+    list-style-type: none;
+    display: block;
+    width: 85%;
+    padding-left: 14%;
+}
+
+.NavigationMenu ul li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 2px;
+    color: gray;
+}
+.content {
+    background-color: #191919;
+    margin-left  : 15%;
+    height: 100%;
+    display : grid;
+    grid-template-columns : 80% 20%;
+}
+
+.middleContent {
+    padding : 40px;
+}
+
+.HomeBanner {
+    height : 45vh;
+    background-image : url("../../images/fall.jpg");
+    background-size: cover;
+    border-radius : 20px;
+    background-position : center;
+    position : relative;
+}
+
+.bannerButtons {
+    position : absolute;
+    bottom : 25px;
+    right : 25px;
+}
+
+.bannerButtons button {
+    padding : 5px 10px;
+    border: 0;
+    background-color : rgba(210, 210, 210, 0.2);
+    position : relative;
+    border-radius: 10px;
+    font-size : 20px;
+    padding: 15px 20px;
+}
+
+.bannerButtons button span {
+    color: white;
+}
+
+.bannerButtons button:nth-child(2) {
+    margin-left : 20px;
+}
+
+.trackTitle {
+    color : whitesmoke;
+}
+
+.track {
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr 1fr;
+}
+
+.track img {
+    height : 300px;
+    width : 100%;
+}
+
+.seeall {
+    font-size: 1rem;
+    float: right;
+    color: gray;
+}
+
+.rightContent {
+    padding-right: 20px;
+    color : whitesmoke;
+}
+
+
+.sideSection {
+    padding: 20px;
+    background-color : #212121;
+    border-radius: 20px;
+}
+
+.sideSection ul {
+    list-style-type : none;
+    padding : 0;
+    margin : 0;
+}
+
+.sideSection ul li {
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+}
+
+.filters {
+    list-style-type : none;
+    margin : 20px 0 0 0;
+    padding : 0;
+}
+
+.filters li {
+    padding : 5px 0;
+}
+

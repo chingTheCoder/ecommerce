@@ -1,10 +1,13 @@
 import './App.css';
+import { useState } from 'react';
 import SignUpScreen from './screens/signUp/SignUp.js'
 import SignInScreen from './screens/signIn/SignInScreen.js'
 import MainScreen from './screens/MainScreen/MainScreen';
-
+import {MovieDetailsContext} from './screens/MainScreen/context/MovieDetailsContext.js'
 
 function App() {
+
+  const [overview, setview] = useState("")
 
   let x = 3
 
@@ -16,7 +19,9 @@ function App() {
 
   if ( x === 3 ) {
     return (
-       <MainScreen></MainScreen>
+        <MovieDetailsContext.Provider value={{overview, setview}}>
+              <MainScreen></MainScreen>
+        </MovieDetailsContext.Provider>
      )
   }
   return (

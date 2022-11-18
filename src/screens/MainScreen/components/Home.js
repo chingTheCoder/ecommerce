@@ -1,6 +1,6 @@
 import React , { useState , useEffect } from "react";
 import SearchBar from "./SearchBar";
-import Button from "../../../globalcomponents/Button.js"
+import Card from "./Card";
 
 const Home = () => {
 
@@ -38,10 +38,13 @@ const Home = () => {
                 <div className="track">
                     {
                         trending.filter((item, index) => index < 4).map((card) => (
-                            <div className="card" key={card.id} >
-                                    {/* <h2>{card.overview}</h2> */}
-                                    <img src={`https://image.tmdb.org/t/p/w500${card.poster_path}`}/>
-                            </div>
+                            <Card className="card" key={card.id} 
+                                title={card.title}
+                                image={card.poster_path}
+                                description={card.overview}
+                                release={card.release_date}
+                                rating={card.vote_average}
+                                ></Card>
                         ) )
                     }
                 </div>

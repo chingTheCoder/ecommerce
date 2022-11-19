@@ -1,9 +1,14 @@
-import React from 'react'
+import React , {useContext} from 'react'
+import { UserContext } from '../MainScreen/../../context/UserContext.js'
 import './SignInScreen.css'
 import InputField from '../../globalcomponents/InputField'
 import Button from '../../globalcomponents/Button'
 
+
 const SignInScreen = () => {
+
+    const {setUserState } = useContext(UserContext)
+
     return (
         <div className='SignInCover'>
             <div className='leftSignInCover'>
@@ -21,12 +26,12 @@ const SignInScreen = () => {
                             <a href="facebook.com">Forgot password</a>
                         </div>
                     </div>
-                    <Button>Log In</Button>
+                    <Button onClick={()=> setUserState('approved')}>Log In</Button>
                     <div className='noAccount'>
                         <span style={{color : "gray"}}>
                             Dont have an account?
                         </span>
-                        <a href="facebook.com">sign up for free</a>
+                        <button onClick={() => setUserState('createAccount')}>sign up for free</button>
                     </div>
                 </form>
             </div>

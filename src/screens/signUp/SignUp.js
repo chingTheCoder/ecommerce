@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../MainScreen/../../context/UserContext.js'
 import InputField from "../../globalcomponents/InputField.js"
 import Button from "../../globalcomponents/Button.js"
 import './SignUp.css'
 
 const SignUpScreen = () => {
+
+    const {setUserState } = useContext(UserContext)
 
     return (
         <div className='SignUpCover'>
@@ -32,10 +35,13 @@ const SignUpScreen = () => {
                     <InputField type="email" placeholder="Email"/>
                     <InputField type="Password" placeholder="Password"/>
                     <div style={{ margin : '40px 0 20px 0'}}>
-                        <Button border='no'>Create a new account</Button>
+                        <Button onClick={()=>setUserState('login')} border='no'>Create a new account</Button>
                     </div>
                     <Button variant="dark" color="white">Sign up with Google</Button>
-                    <h6>already have an account <a href="facebook.com">Log In</a></h6>
+                    <h6>already have an account 
+                        <button 
+                        onClick={()=>setUserState('login')}
+                        href="facebook.com">Log In</button></h6>
                 </form>
             </div>
         </div>

@@ -1,45 +1,58 @@
-import './App.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import SignUpScreen from './screens/signUp/SignUp.js'
 import SignInScreen from './screens/signIn/SignInScreen.js'
 import MainScreen from './screens/MainScreen/MainScreen';
 import {MovieDetailsContext} from './screens/MainScreen/context/MovieDetailsContext.js'
+import { UserContext } from './context/UserContext.js'
+
 
 function App() {
 
-  const [overview, setview] = useState("")
+  const [overview , setview ] = useState("")
+  const { userState } = useContext(UserContext)
 
   let x = 3
 
-  if (x === 1) {
+  if (userState === 'login') {
+
     return (
       <SignInScreen></SignInScreen>
     )
+
   }
 
-  if ( x === 3 ) {
+  if (userState === 'approved') {
     return (
         <MovieDetailsContext.Provider value={{overview, setview}}>
               <MainScreen></MainScreen>
         </MovieDetailsContext.Provider>
      )
   }
+
+  if (userState === 'createAccount') {
+      return (
+          <SignUpScreen></SignUpScreen>
+      )
+  }
+
   return (
-      <SignUpScreen></SignUpScreen>
+    <SignInScreen></SignInScreen>
   )
 
 }
 
 
-// function App () {
-//   return (
-//     <Routes>
-//         <Route path="/" element={<Home/>}/>
-//         <Route path="/movies" element={<Movies/>}/>
-//         <Route path="/tvseries" element={<Tvseries/>}/>
-//         <Route path="/upcoming" element={<UpComing/>}/>
-//     </Routes>
-//   )
-// }
+function MainSite () {
 
-export default App;
+  const [userState , setUserState ] = useState("login")
+
+        return (
+            <UserContext.Provider value={{userState, setUserState}}>
+                <App/>
+            </UserContext.Provider>
+        )
+
+}
+
+
+export default MainSite;

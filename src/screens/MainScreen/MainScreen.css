@@ -1,3 +1,6 @@
+.active {
+    background-color: red;
+}
 .NavigationMenu {
     position: fixed;
     width: 15%;
@@ -29,6 +32,20 @@
     padding-left: 2px;
     color: gray;
 }
+
+.searchBar {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #212121;
+    color: whitesmoke;
+}
+
+
 .content {
     background-color: #191919;
     margin-left  : 15%;
@@ -72,6 +89,10 @@
 
 .bannerButtons button:nth-child(2) {
     margin-left : 20px;
+}
+
+.list {
+    padding: 40px;
 }
 
 .trackTitle {

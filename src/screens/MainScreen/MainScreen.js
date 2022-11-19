@@ -1,9 +1,9 @@
 import React,{ useState, useContext } from 'react'
-import { Link, Routes , Route } from 'react-router-dom'
+import { Link, NavLink , Routes , Route } from 'react-router-dom'
 import Home from './components/Home.js'
 import Movies from './components/Movies.js'
 import TvSeries from './components/TvSeries.js'
-import UpComing from '../upcoming/UpComing.js'
+import UpComing from './components/UpComing.js'
 import RightContent from './components/RightContent.js'
 import { MovieDetailsContext } from './context/MovieDetailsContext.js'
 import { MovieModalContext } from './context/MovieModalContext.js'
@@ -26,16 +26,27 @@ const MainScreen = () => {
                 <div>Logo Here</div>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/"
+                        className={({isActive})=> (isActive ? 'active' : 'inactive') }>
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/movies">Movies</Link>
+                        <NavLink to="/movies"
+                        className={({isActive})=> (isActive ? 'active' : 'inactive')}
+                        >
+                            Movies</NavLink>
                     </li>
                     <li>
-                        <Link to="/tvseries">Tv Series</Link>
+                        <NavLink to="/tvseries"
+                        className={({isActive})=> (isActive ? 'active' : 'inactive')}
+                        >
+                            Tv Series</NavLink>
                     </li>
                     <li>
-                        <Link to="/upcoming">Upcoming</Link>
+                        <NavLink to="/upcoming"
+                        className={({isActive})=> (isActive ? 'active' : 'inactive')}
+                        >Upcoming</NavLink>
                     </li>
                 </ul>
 

@@ -18,7 +18,7 @@ const Card = (props) => {
 
     console.log(props)
     return (
-        <div onClick={ () => popDetails(props)}>
+        <div className="card" onClick={ () => popDetails(props)}>
             <img src={`https://image.tmdb.org/t/p/w500${props.image}`}/>
         </div>
     )

@@ -1,26 +1,45 @@
 .active {
-    background-color: red;
+    background-color: #2C6865;
+    border-right: 5px solid #39B7B2;
+    color: #39B7B2 !important;
+    font-weight: 900;
 }
+
+
+.logo {
+    height: 100px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo span {
+    color: #39B7B2;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .NavigationMenu {
     position: fixed;
-    width: 15%;
+    width: 12%;
     left: 0;
     right: 15%;
     height: 100vh;
     background-color: #212121;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 
 .NavigationMenu ul {
-    padding: 0;
-    margin: 50px 0 0 0;
+    padding: 30px 0 0 0;
+    margin:  0 ;
 }
 
 .NavigationMenu ul li {
     list-style-type: none;
     display: block;
-    width: 85%;
-    padding-left: 14%;
+    width: 100%;
 }
 
 .NavigationMenu ul li a {
@@ -31,16 +50,74 @@
     line-height: 50px;
     padding-left: 2px;
     color: gray;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.ticketIcon {
+    background-color: #2C6865;
+    position: absolute;
+    top: -19px;
+    height: 38px;
+    left: 50%;
+    color: #39B7B2;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    font-size: 25px;
+    padding-top: 6px;
+    border: 0;
+}
+
+.ticketWrapper {
+    position: relative;
+    margin: 30px 20px 20px 20px;
+    background-color: #191919;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding-top: 40px;
+}
+
+.ticketWrapper p {
+    color: whitesmoke;
+    padding: 0 10px;
+    font-size: .8rem;
+    margin: 0;
+}
+
+.ticketWrapper h6 {
+    color: gray;
+    margin: 5px 10px;
+}
+
+.startPlaying {
+    border: 0;
+    background-color: #2C6865;
+    border-radius: 20px;
+    color: #39B7B2;
+    padding: 5px 10px;
+    display: block;
+    margin: 0px auto;
+    font-weight: 300;
+}
+
+.logout {
+    border: 0;
+    background-color: transparent;
+    color: gray;
+    margin-left: 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .searchBar {
     box-sizing: border-box;
     width: 100%;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 30px;
+    padding: 12px;
     border: none;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 20px;
+    font-size: 1rem;
     background-color: #212121;
     color: whitesmoke;
 }
@@ -48,14 +125,14 @@
 
 .content {
     background-color: #191919;
-    margin-left  : 15%;
+    margin-left  : 12%;
     height: 100%;
     display : grid;
     grid-template-columns : 80% 20%;
 }
 
 .middleContent {
-    padding : 40px;
+    padding : 30px 30px 20px 30px;
 }
 
 .HomeBanner {
@@ -92,21 +169,26 @@
 }
 
 .list {
-    padding: 40px;
+    padding: 30px;
 }
 
 .trackTitle {
     color : whitesmoke;
+    font-weight: 400;
 }
 
 .track {
     display : grid;
     grid-template-columns : 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
 }
 
+
 .track img {
-    height : 300px;
+    border-radius: 20px;
+    height : 280px;
     width : 100%;
+    object-fit: cover;
 }
 
 .seeall {

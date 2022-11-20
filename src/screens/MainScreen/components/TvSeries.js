@@ -1,5 +1,6 @@
 import React, { useState , useEffect} from "react";
 import Card from "./Card";
+import SearchBar from "./SearchBar";
 
 const TvSeries = () => {
 
@@ -27,6 +28,7 @@ const TvSeries = () => {
 
     return (
         <div className="list">
+            <SearchBar></SearchBar>
             <div className="track">
                 {
                     tv.filter((item, index) => index < 12).map((card) => (

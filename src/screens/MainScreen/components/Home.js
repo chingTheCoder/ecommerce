@@ -84,7 +84,7 @@ const Home = () => {
                 <div className="track">
                     {
                         tvseries.filter((item, index) => index < 4).map((card) => (
-                            <Card className="card" key={card.id} 
+                            <Card  key={card.id} 
                                 title={card.title}
                                 image={card.poster_path}
                                 description={card.overview}

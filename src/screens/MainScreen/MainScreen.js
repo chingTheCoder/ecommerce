@@ -9,9 +9,12 @@ import { MovieDetailsContext } from './context/MovieDetailsContext.js'
 import { MovieModalContext } from './context/MovieModalContext.js'
 import './MainScreen.css'
 import MovieDetailsModal from './components/MovieDetailsModal.js'
+import { UserContext } from '../../context/UserContext.js'
+import { IoHomeOutline, IoVideocamOutline , IoTvOutline , IoAlbumsOutline , IoLogoXbox, IoLogOutOutline } from "react-icons/io5";
 
 const MainScreen = () => {
 
+    const { setUserState } = useContext(UserContext)
     const [overview , setOveriew] = useState("")
     const [movieTitle , setMovieTitle ] = useState("")
     const [movieImage , setMovieImage ] = useState("")
@@ -21,35 +24,46 @@ const MainScreen = () => {
     const [modal, setModal] = useState(false)
 
     return (
-        <div className='MainSite'>
+        <div className='MainSite' style={{ backgroundColor : '#191919'}}>
           <nav className='NavigationMenu'>
-                <div>Logo Here</div>
+                <div className='logo'>
+                    <span>MOVBIES</span>
+                </div>
                 <ul>
                     <li>
                         <NavLink to="/"
                         className={({isActive})=> (isActive ? 'active' : 'inactive') }>
-                            Home
+                           <IoHomeOutline/>  Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/movies"
                         className={({isActive})=> (isActive ? 'active' : 'inactive')}
                         >
-                            Movies</NavLink>
+                            <IoVideocamOutline/>  Movies</NavLink>
                     </li>
                     <li>
                         <NavLink to="/tvseries"
                         className={({isActive})=> (isActive ? 'active' : 'inactive')}
-                        >
-                            Tv Series</NavLink>
+                        ><IoTvOutline/>  Tv Series</NavLink>
                     </li>
                     <li>
                         <NavLink to="/upcoming"
                         className={({isActive})=> (isActive ? 'active' : 'inactive')}
-                        >Upcoming</NavLink>
+                        ><IoAlbumsOutline/>  Upcoming</NavLink>
                     </li>
                 </ul>
-
+                <div className='ticketWrapper'>
+                <button className='ticketIcon'><IoLogoXbox/></button>
+                    <div className='innerTicketWrapper'>
+                        <span className='ticketIcon'></span>
+                        <p>Play movies quizes and earn <br/> free  tickets</p>
+                        <h6>50k people are playing now</h6>
+                        <button className='startPlaying'>start playing</button>
+                    </div>
+                </div>
+                <button className='logout'onClick={ () => setUserState('login')}>
+                    <IoLogOutOutline/>     log out</button>
           </nav>
           <div className='content'>
             <div className='leftContent'>

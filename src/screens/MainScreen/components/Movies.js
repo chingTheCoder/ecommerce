@@ -1,5 +1,6 @@
 import React , {useEffect, useState } from "react";
 import Card from "./Card";
+import SearchBar from "./SearchBar";
 
 
 const Movies = () => {
@@ -27,6 +28,7 @@ const Movies = () => {
     }, [])
     return (
         <div className="list">
+              <SearchBar></SearchBar>
               <div className="track">
                     {
                         movies.filter((item, index) => index < 12).map((card) => (

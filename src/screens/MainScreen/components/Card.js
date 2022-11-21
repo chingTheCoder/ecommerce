@@ -11,7 +11,7 @@ const Card = (props) => {
         setMovieTitle(data.title)
         setOveriew(data.description)
         setMovieImage(data.image)
-        setMovieRating(data.vote_average)
+        setMovieRating(data.rating)
         setMovieDate(data.release_date)
         setModal(true)
     }

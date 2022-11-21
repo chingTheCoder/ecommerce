@@ -22,7 +22,7 @@ const SignInScreen = () => {
                         <div style={{ color : 'gray'}}>
                             remember me for 30 days
                         </div>
-                        <div>
+                        <div className='link'>
                             <a href="facebook.com">Forgot password</a>
                         </div>
                     </div>

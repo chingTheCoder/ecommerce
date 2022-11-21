@@ -17,8 +17,29 @@
     width: 400px;
 }
 
+.leftSignInCover form h3 {
+    font-size: 30px;
+    margin: 5px 0;
+}
 .rightSignInCover {
     background-image: url('../../images/topgun.jpg');
     background-size : cover;
+}
+
+.doThis {
+    margin: 20px 0;
+}
+
+.doThis a {
+    color: whitesmoke;
+}
+.noAccount {
+    margin-top: 20px;
+    text-align: center;
+}
+.noAccount button {
+    border : 0;
+    background-color: transparent;
+    color: whitesmoke;
 }
 

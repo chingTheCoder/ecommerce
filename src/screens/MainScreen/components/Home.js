@@ -61,7 +61,7 @@ const Home = () => {
                                 image={card.poster_path}
                                 description={card.overview}
                                 release={card.release_date}
-                                rating={card.vote_average}
+                                rating={card.rating}
                                 ></Card>
                         ) )
                     }
@@ -75,7 +75,7 @@ const Home = () => {
                                 image={card.poster_path}
                                 description={card.overview}
                                 release={card.release_date}
-                                rating={card.vote_average}
+                                rating={card.rating}
                                 ></Card>
                         ) )
                     }
@@ -89,7 +89,7 @@ const Home = () => {
                                 image={card.poster_path}
                                 description={card.overview}
                                 release={card.release_date}
-                                rating={card.vote_average}
+                                rating={card.rating}
                                 ></Card>
                         ) )
                     }

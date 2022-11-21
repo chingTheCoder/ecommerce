@@ -38,8 +38,10 @@ const SignUpScreen = () => {
                         <Button onClick={()=>setUserState('login')} border='no'>Create a new account</Button>
                     </div>
                     <Button variant="dark" color="white">Sign up with Google</Button>
-                    <h6>already have an account 
+                    <h6 style={{ color : 'gray', textAlign : 'center'}}>already have an account 
                         <button 
+                        style={{ backgroundColor : 'transparent' , border: 0 ,
+                        color : 'whitesmoke'}}
                         onClick={()=>setUserState('login')}
                         href="facebook.com">Log In</button></h6>
                 </form>
